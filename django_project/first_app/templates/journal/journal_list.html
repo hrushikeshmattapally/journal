@@ -12,6 +12,10 @@
                 <h2>{{ entry.title }}</h2>
                 <p>{{ entry.content }}</p>
                 <p><em>{{ entry.created_at }}</em></p>
+                <form method="post" action="{% url 'journal_delete' entry.pk %}">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
             </li>
         {% endfor %}
     </ul>

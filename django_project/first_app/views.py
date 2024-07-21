@@ -23,3 +23,16 @@ def journal_create(request):
     else:
         form = JournalEntryForm()
     return render(request, 'journal/journal_create.html', {'form': form})
+
+
+from django.shortcuts import get_object_or_404
+from django.urls import reverse
+
+# Existing imports and views...
+
+def journal_delete(request, pk):
+    entry = get_object_or_404(JournalEntry, pk=pk)
+    if request.method == 'POST':
+        entry.delete()
+        return redirect(reverse('journal_list'))
+    return render(request, 'journal/journal_delete_confirm.html', {'entry': entry})
