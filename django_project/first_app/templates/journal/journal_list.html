@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Journal</title>
+</head>
+<body>
+    <h1>Journal Entries</h1>
+    <a href="{% url 'journal_create' %}">Create New Entry</a>
+    <ul>
+        {% for entry in entries %}
+            <li>
+                <h2>{{ entry.title }}</h2>
+                <p>{{ entry.content }}</p>
+                <p><em>{{ entry.created_at }}</em></p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
