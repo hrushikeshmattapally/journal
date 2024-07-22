@@ -1,12 +1,12 @@
 /* static/journal/css/styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: white#454242;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 
 h1 {
@@ -33,20 +33,25 @@ ul {
 }
 
 li {
-    background-color: white;
+    background-color: white(236, 9, 9);
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: 200%;
     max-width: 600px;
 }
 
 h2 {
+    align-items: center;
     margin: 0 0 10px;
     color: #007bff;
 }
-
+.H2{
+    align-items: center;
+    margin: 0 0 10px;
+    color: #007bff;
+}
 p {
     margin: 0 0 10px;
 }
