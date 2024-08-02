@@ -1,16 +1,19 @@
 /* static/journal/css/styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: white#454242;
+    color: #c82333;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: left;
+    background-image: url('https://images.pexels.com/photos/1074882/pexels-photo-1074882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 h1 {
-    color: #333;
+    color: whitesmoke;
     margin: 20px 0;
 }
 
@@ -37,7 +40,7 @@ li {
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(229, 5, 5, 0.527);
     width: 200%;
     max-width: 600px;
 }
@@ -71,4 +74,33 @@ button {
 
 button:hover {
     background-color: #c82333;
+}
+input {
+    color: #333; /* Input text color */
+    background-color: #fff; /* Input background color */
+    border: 1px solid #ccc; /* Input border color */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Add margin for spacing */
+    width: 100%; /* Make input fields take up full width of the container */
+    max-width: 600px; /* Optional: set a maximum width */
+    font-size: 16px; /* Optional: increase font size for better readability */
+}
+
+textarea {
+    color: #333; /* Text area text color */
+    background-color: #fff; /* Text area background color */
+    border: 1px solid #ccc; /* Text area border color */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Add margin for spacing */
+    width: 100%; /* Make text area take up full width of the container */
+    max-width: 600px; /* Optional: set a maximum width */
+    height: 350px; /* Set height for the text area */
+    font-size: 16px; /* Optional: increase font size for better readability */
+}
+
+form {
+    width: 100%;
+    max-width: 600px; /* Optional: set a maximum width for the form */
 }
