@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{% static 'journal/css/style2.css' %}">
+</head>
+<body>
+    <!-- Settings menu in the top right -->
+    <div class="settings">
+        <div class="settings-icon" onclick="toggleSettingsMenu()">⚙️</div>
+        <div class="settings-menu" id="settingsMenu">
+            <a href="#">Change Theme</a>
+            <a href="{% url 'logout' %}">Logout</a>
+            <a href="#">Other Settings</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="typing">Welcome! Discover your creativity with us.</div>
+        
+        <!-- Options arranged vertically -->
+        <div class="options">
+            <div class="option">
+                <a href="{% url 'journal_list' %}" class="option-link">
+                    <div class="option-title">Journal Entry</div>
+                    <p>Record your thoughts, daily reflections, and experiences.</p>
+                </a>
+            </div>
+            <div class="option">
+                <a href="{% url 'notes_list' %}" class="option-link">
+                    <div class="option-title">Notes Making</div>
+                    <p>Organize ideas and keep all your notes in one place.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

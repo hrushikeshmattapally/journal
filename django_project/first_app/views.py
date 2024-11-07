@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 def index(request):
-    return HttpResponse("hi!")
+    return render(request, 'journal/index.html')
 def hel(request):
     return render(request,"hello/hello.html")
 
@@ -36,3 +36,10 @@ def journal_delete(request, pk):
         entry.delete()
         return redirect(reverse('journal_list'))
     return render(request, 'journal/journal_delete_confirm.html', {'entry': entry})
+
+
+from django.shortcuts import render
+
+def notes_list(request):
+    # Add your notes retrieval logic here
+    return render(request, 'notes_list.html')
